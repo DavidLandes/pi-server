@@ -17,6 +17,7 @@ def try_cmd(cmd):
     if type(cmd) == str:
         if cmd == "quit" or cmd == "q":
             print(f"[DISCONNECT] {SERVER} session has ended.")
+            send(DISCONNECT_MESSAGE)
             return False
 
         elif cmd[0:4] == "send" and cmd[4:5] == " ":
